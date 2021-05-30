@@ -1,0 +1,618 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+/*start selection color area*/
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #04AA6D;
+}
+
+::selection {
+  color: white;
+  background: #04AA6D;
+}
+
+.title{
+    font-size:20px;
+}
+
+/*end selection color area*/
+li{
+    list-style-type: square;
+}
+
+.main {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding: 60px;
+    box-sizing: border-box;
+    position: relative;
+    /*border: 1px solid red;*/
+
+}
+
+.childmain {
+    border: 2px solid black;
+}
+
+.left {
+    width: 40%;
+    height: 1550px;
+    padding: 20px;
+    background-color: #2E2E2E;
+    float: left;
+    color: white;
+
+}
+
+
+.image {
+
+    width: 300px;
+    height: 300px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 30px;
+}
+
+.image img {
+    clip-path: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    border: 8px solid #047DD9;
+    border-radius: 100%;
+
+}
+
+
+.personal,
+.lang,
+.personality,
+.softskill {
+    margin-right: 30px;
+}
+
+.heading {
+    color: white;
+    background-color: #047DD9;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 30px;
+    margin-left: -10px;
+    position: relative;
+    z-index: 1;
+}
+
+.heading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: -10px;
+    transform-origin: top right;
+    transform: skewY(-40deg);
+    width: 10px;
+    height: 100%;
+    background-color: #075d9f;
+    z-index: -1;
+}
+
+.per-info h4 {
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+.per-info a {
+    display: block;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.lang li,
+.personality li,
+.softskill li {
+    margin-left: 20px;
+    list-style-type: square;
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.right {
+    width: 60%;
+    height: 1550px;
+    padding: 20px;
+    background-color: white;
+    float: left;
+    color: black;
+}
+
+.namepro h1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.namepro p {
+    margin-top: 5px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.profile p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    text-align: justify;
+}
+
+.education .school,
+.experi {
+    margin-top: 15px;
+}
+
+.education .school h3,
+.experi h3 {
+    font-style: italic;
+}
+
+
+.skills li {
+    margin-left: 20px;
+    list-style-type: square;
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.hobby-icon li {
+    margin-left: 20px;
+    list-style-type: square;
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.signature {
+    width: 90px;
+    position: absolute;
+    right: 100px;
+    bottom: 120px;
+}
+
+.signature p {
+    text-align: center;
+    border-top: 1px dotted black;
+}
+
+.footer {
+    clear: both;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid black;
+}
+
+/* All Types of Media query */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+    .main{
+        padding: 11px;
+        position: relative;
+    }
+    
+    .image{
+        position:absolute;
+        top: 40px;;
+        left:18%;
+    }
+    .left{
+        height: 1450px;
+    }
+    .personal{
+        margin-top: 350px;
+    }
+    
+    /* for right side */
+    .right{
+        height: 1450px;
+    }
+    .namepro p{
+        font-size:1.6vw;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) and (min-width:992px) {
+    .main{
+        padding: 12px;
+        position: relative;
+    }
+    
+    .image{
+        position:absolute;
+        top: 40px;;
+        left:20%;
+    }
+    .left{
+        height: 1465px;
+    }
+    .personal{
+        margin-top: 350px;
+    }
+
+    /* for right side */
+    .right{
+        height: 1465px;
+    }
+    .namepro p{
+        font-size:1.6vw;
+    }
+    
+  
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) and (min-width:768px) {
+    
+    *{
+        font-size:16px;
+    }
+
+    .main{
+        padding: 12px;
+        position: relative;
+    }
+    .childmain{
+        position: relative;
+    }
+    
+    li{
+        font-size:16px;
+    }
+    /* left side start */
+    .left{
+        height: 1465px;
+    }
+    .image {
+        position:absolute;
+        width: 300px;
+        height: 240px;
+        top:10px;
+        left: 20%;
+        transform: translateX(-50%);
+        margin-bottom: 30px;
+    }
+    img {
+        height: 250px;
+        width:250px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 30px;
+    }
+    .personal{
+        margin-top: 250px;
+    }
+    .title{
+        font-size:15px;
+    }
+    /* for right side */
+    .right{
+        height: 1465px;
+    }
+    .namepro p{
+        font-size:1.6vw;
+    }
+    .footer p{
+        font-size:14px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) and (min-width:600px) {
+    *{
+        font-size: 14px;
+    }
+    .main{
+        padding: 11px;
+    }
+    .childmain{
+        position: relative;
+    }
+    
+    /* left side start */
+    .left{
+        height: 1310px;
+    }
+    .image {
+        position: absolute;
+        width: 225px;
+        height: 225px;
+        left: 36%;
+        transform: translateX(-50%);
+        margin-bottom: 30px;
+    }
+    img {
+        height: 210px;
+        width:210px;
+        position: relative;
+        left: 10%;
+        transform: translateX(-50%);
+        margin-bottom: 30px;
+    }
+    .personal{
+        margin-top: 215px;
+    }
+    .title{
+        font-size:14px;
+    }
+    /* for right side */
+    .right{
+        height: 1310px;
+    }
+    .namepro p{
+        font-size:1.6vw;
+        font-weight:bold;
+    }
+    .skills li{
+        font-size: 15px;
+    }
+    .hobby-icon li{
+        font-size: 12px;
+    }
+    .footer p{
+        font-size:13px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) and (min-width:480px) {
+    .main{
+        padding: 11px;
+    }
+
+    .childmain{
+        background-color: white;
+        position:relative;
+        top:0;
+        left:0;
+        height:2970px;
+    }
+    .image{
+        margin-top:10px;
+    }
+    
+    .right{
+        background-color: white;
+        position:absolute;
+        top:335px;
+        left:0;
+        width:100%;
+        float:left;
+        height:1615px;
+    }
+
+    .namepro{
+        text-align: center;    
+    }
+    .namepro p{           
+        font-size:2.8vw;
+        font-weight: bold;
+    }
+
+    .heading{
+        width: 100% !important;
+    }
+
+
+    .personal{
+        position:absolute;
+        width:94%;
+        top: -1362px;
+        z-index: 10;
+    }
+    .per-info a{
+        display:block;
+        color: black;
+        font-size: 18px;
+    }
+    .experience{
+        position:absolute;
+        top:680px;
+        /* visibility: hidden; */
+    }
+    .skills1{
+        position:absolute;
+        top:935px;
+        /* visibility:hidden; */
+    }
+    .skills2{
+        position:absolute;
+        top:1360px;
+        /* visibility:hidden; */
+    }
+    .education{
+        position:absolute;
+        width:94%;
+        top:1720px;
+        /* visibility:hidden; */
+    }
+    .hobby{
+        position:absolute;
+        width:94%;
+        top:2415px;
+        /* visibility: hidden; */
+    }
+    .left{
+        background-color:white;
+        color: black;
+        position:absolute;
+        top:1950px;
+        width:100%;
+        height:950px;
+        float:left;
+    }
+    .lang{
+        position:absolute !important;
+        width:94%;
+        top:310px !important;
+        /* visibility:hidden; */
+    }
+    .personality{        
+        position:absolute !important;
+        width:94%;
+        top:410px !important;
+        /* visibility:hidden; */
+    }
+
+    .softskill{                
+        position:absolute !important;
+        width:94%;
+        top:575px !important;
+        /* visibility:hidden; */
+    }
+    .footer{
+        background-color: white;
+        margin-top: 2590px;
+        font-size: 1.2vw;
+    }
+    
+    
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 480px){
+    
+    .main{
+        padding: 11px;
+    }
+    .childmain{
+        background-color: white;
+        position:relative;
+        top:0;
+        left:0;
+        height:2910px;
+    }
+    .image{
+        margin-top:10px;
+    }
+    img {
+        height: 150px;
+        width:150px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 30px;
+    }
+    
+    .right{
+        background-color: white;
+        position:absolute;
+        top:335px;
+        left:0;
+        width:100%;
+        float:left;
+        height:1615px;
+    }
+
+    .namepro h1{
+        text-align: center;
+        font-size: 5.5vw;
+        margin-top: -180px;   
+
+    }
+    .namepro p{   
+        text-align: center;        
+        font-size:2.6vw;
+        font-weight: 100;
+    }
+
+    .heading{
+        width: 95% !important;
+    }
+
+
+    .personal{
+        position:absolute;
+        width:94%;
+        top: -1530px;
+        z-index: 10;
+    }
+    .per-info a{
+        display:block;
+        color: black;
+        font-size: 3.8vw;
+    }
+    .experience{
+        position:absolute;
+        top:520px;
+        /* visibility: hidden; */
+    }
+    .skills1{
+        position:absolute;
+        top:810px;
+        /* visibility:hidden; */
+    }
+    .skills2{
+        position:absolute;
+        top:1260px;
+        /* visibility:hidden; */
+    }
+    .education{
+        position:absolute;
+        width:94%;
+        top:1660px;
+        /* visibility:hidden; */
+    }
+    .softskill{                
+        position:absolute !important;
+        width:94%;
+        top:245px !important;
+        /* visibility:hidden; */
+    }
+    .personality{        
+        position:absolute !important;
+        width:94%;
+        top:465px !important;
+        /* visibility:hidden; */
+    }
+    .lang{
+        position:absolute !important;
+        width:94%;
+        top:630px !important;
+        /* visibility:hidden; */
+    }
+    .hobby{
+        position:absolute;
+        width:94%;
+        top:2355px;
+        /* visibility: hidden; */
+    }
+    
+    .left{
+        background-color:white;
+        color: black;
+        position:absolute;
+        top:1950px;
+        width:100%;
+        height:870px;
+        float:left;
+    }
+    
+    
+    .footer{
+        background-color: white;
+        margin-top: 2511px;
+        font-size: 1.2vw;
+    }
+}
+
+/* min responsive 350px */
